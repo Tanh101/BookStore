@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 var bodyParser = require("body-parser");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
+const authorRoute = require("./routes/author");
 
 //config to read env file
 dotenv.config();
@@ -17,9 +18,11 @@ app.use(cors())
 mongoose.connect(process.env.MONGODB_URL, () => {
     console.log("Connected to MongoDB")
 })
-app.get("/api", (req, res)=> {
-    res.status(200).json("Hello")
-})
+
+
+//ROUTE("")
+app.use("/v1/author", authorRoute);
+
 
 app.listen(3000, () => {
     console.log("Server is running...");
