@@ -1,0 +1,21 @@
+{
+  "name": "bookshop",
+  "version": "1.0.0",
+  "description": "rest api with express, mongoose, mongoDB and postman",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "bookShop"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.2",
+    "morgan": "^1.10.0"
+  }
+}
